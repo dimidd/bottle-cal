@@ -8,7 +8,7 @@ import pathlib
 CAL = calendar.HTMLCalendar(calendar.SUNDAY)
 Y, M = time.strftime('%Y %m').split()
 BASE_PATH = pathlib.Path(__file__).parent
-PORT = int(os.environ.get("PORT", 8080))
+PORT = int(os.environ.get("PORT", 5000))
 MIN_YEAR = 2
 MAX_YEAR = 9999
 
