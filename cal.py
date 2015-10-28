@@ -8,7 +8,7 @@ import pathlib
 CAL = calendar.HTMLCalendar(calendar.SUNDAY)
 Y, M = time.strftime('%Y %m').split()
 BASE_PATH = pathlib.Path(__file__).parent
-PORT = int(os.environ.get("PORT", 5000))
+PORT = int(os.environ.get("PORT", 49229))
 MIN_YEAR = 2
 MAX_YEAR = 9999
 
@@ -69,4 +69,4 @@ def server_static(filepath):
     return static_file(filepath, root=str(BASE_PATH / 'assets'))
 
 
-run(host='localhost', port=PORT, debug=False)
+run(host='0.0.0.0', port=PORT, debug=False)
