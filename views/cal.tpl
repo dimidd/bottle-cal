@@ -30,7 +30,7 @@
   <ol>
   % for e in events:
     % desc = re.split(r'\.(ref|{|<a href|amp)', e["description"])[0]
-    % desc = desc.replace('ampndash', '–').replace("\\'", "'")
+    % desc = re.sub(r'{{.+}}', '', desc.replace('ampndash', '–').replace("\\'", "'"))
     % date = '/'.join(reversed(e["date"].split('/'))) if e["date"] else ''
     <li>{{!desc}} -- {{date}}</li>
   % end
