@@ -69,4 +69,4 @@ def server_static(filepath):
     return static_file(filepath, root=str(BASE_PATH / 'assets'))
 
 
-run(host='localhost', port=PORT, debug=True)
+run(host='localhost', port=PORT, debug=False)
